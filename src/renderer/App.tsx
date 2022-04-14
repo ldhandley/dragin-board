@@ -1,5 +1,6 @@
 import NoteBloq from 'Components/NoteBloq';
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import icon from '../../assets/icon.svg';
 import './App.css';
 
 const Hello = () => {
@@ -7,6 +8,7 @@ const Hello = () => {
     <div>
       <NoteBloq />
       <div className="Hello">
+      <img width="200px" alt="icon" src={icon} />
       </div>
       <h1>Dragin Board!</h1>
       <div className="Hello">
