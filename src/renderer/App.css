@@ -3,6 +3,7 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 body {
+  text-align: center;
   position: relative;
   color: white;
   height: 100vh;
@@ -62,6 +63,7 @@ a:hover {
 }
 
 .box {
+  text-align: center;
   background: rgb(203, 4, 207);
   border: 1px solid #999;
   border-radius: 4px;
