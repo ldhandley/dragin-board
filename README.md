@@ -44,3 +44,4 @@ npm run package
 ## Docs
 
 See our [docs and guides here](https://electron-react-boilerplate.js.org/docs/installation)
+Here are the [Draggable docs](https://github.com/react-grid-layout/react-draggable)

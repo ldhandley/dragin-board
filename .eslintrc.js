@@ -1,7 +1,7 @@
 module.exports = {
   extends: 'erb',
   extends: 'prettier',
-  plugins: 'prettier',
+  plugins: ['prettier'],
 
   
   rules: {
