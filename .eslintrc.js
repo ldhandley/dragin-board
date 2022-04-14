@@ -1,9 +1,7 @@
 module.exports = {
-  extends: 'erb',
-  extends: 'prettier',
+  extends: ['erb', 'prettier'],
   plugins: ['prettier'],
 
-  
   rules: {
     // A temporary hack related to IDE not resolving correct package.json
     'import/no-extraneous-dependencies': 'off',
