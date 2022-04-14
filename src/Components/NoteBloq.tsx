@@ -6,5 +6,5 @@ export default function NoteBloq() {
     <Draggable>
       <div className="box">note title will go here</div>
     </Draggable>
-  )
+  );
 }

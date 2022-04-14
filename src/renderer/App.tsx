@@ -8,7 +8,7 @@ const Hello = () => {
     <div>
       <NoteBloq />
       <div className="Hello">
-      <img width="200px" alt="icon" src={icon} />
+        <img width="200px" alt="icon" src={icon} />
       </div>
       <h1>Dragin Board!</h1>
       <div className="Hello">
