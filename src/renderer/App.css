@@ -74,3 +74,8 @@ a:hover {
   float: left;
   font-size: calc(5px + 1vmin);
 }
+
+.card {
+  background:rgb(207, 197, 4);
+  color: black;
+}
