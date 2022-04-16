@@ -62,6 +62,12 @@ a:hover {
   margin: 20px 0;
 }
 
+.card {
+background:rgb(203, 4, 207);
+width: 15rem;
+position: absolute;
+}
+
 .box {
   text-align: center;
   background: rgb(203, 4, 207);
