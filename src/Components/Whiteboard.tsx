@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../../src/renderer/App.css';
 
-export default function Whiteboard() {
+export default function Whiteboard(props: any) {
   const canvasRef = useRef();
   const contextRef = useRef();
   const [isDrawing, setIsDrawing] = useState(false);
@@ -44,7 +44,7 @@ export default function Whiteboard() {
 
   return (
     <div className='Body'>
-      {/* <NoteBloq/> */}
+      {props.draginList}
       <canvas
         onMouseDown={onMouseDown}
         onMouseUp={onMouseUp}
