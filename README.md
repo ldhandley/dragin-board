@@ -13,6 +13,11 @@
 
 </div>
 
+## TODO
+* Add a button to create a new card
+* Make card text editable
+* Allow users to make a new card by dragging in text
+
 ## Install
 
 Clone the repo and install dependencies:
