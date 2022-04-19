@@ -5,7 +5,7 @@ export default function Whiteboard(props: any) {
   const canvasRef = useRef();
   const contextRef = useRef();
   const [isDrawing, setIsDrawing] = useState(false);
-  
+
   useEffect(() => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth * 2;
@@ -35,7 +35,7 @@ export default function Whiteboard(props: any) {
 
   const draw = ({ nativeEvent }) => {
     if (!isDrawing) {
-    return;
+      return;
     }
     const { offsetX, offsetY } = nativeEvent;
     contextRef.current.lineTo(offsetX, offsetY);
@@ -43,7 +43,7 @@ export default function Whiteboard(props: any) {
   };
 
   return (
-    <div className='Body'>
+    <div className="Body">
       {props.draginList}
       <canvas
         onMouseDown={onMouseDown}
