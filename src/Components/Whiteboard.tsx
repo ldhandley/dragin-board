@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import '../../src/renderer/App.css';
+import '../renderer/App.css';
 
 export default function Whiteboard(props: any) {
   const canvasRef = useRef();

@@ -1,6 +1,5 @@
 import Draggable from 'react-draggable';
 import '../renderer/App.css';
-const bootstrap = require('bootstrap');
 
 export default function NoteBloq() {
   return (
