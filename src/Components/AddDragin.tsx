@@ -1,4 +1,4 @@
-import NoteBloq from './NoteBloq';
+import Dragin from './Dragin';
 import React from 'react';
 
 interface draginInterface {
@@ -14,22 +14,23 @@ export default class AddDragin extends React.Component<draginInterface> {
       draginProps: { draginList, setDraginList },
     } = this.props;
     if (draginList != undefined) {
-    {
-      const createNoteBloq = () => {
-        setDraginList.rendered(draginList.rendered.concat(<NoteBloq />));
-      };
+      {
+        const createDragin = () => {
+          setDraginList.rendered(draginList.rendered.concat(<Dragin />));
+        };
 
-      return (
-        <div className="buttonMenu">
-          <button
-            type="button"
-            className="btn btn-info"
-            onClick={createNoteBloq}
-          >
-            AddDragin
-          </button>
-        </div>
-      );
+        return (
+          <div className="buttonMenu">
+            <button
+              type="button"
+              className="btn btn-info"
+              onClick={createDragin}
+            >
+              AddDragin
+            </button>
+          </div>
+        );
+      }
     }
-  }}
+  }
 }
