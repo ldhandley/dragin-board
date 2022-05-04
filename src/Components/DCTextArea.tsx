@@ -8,7 +8,7 @@ export default function DCTextArea() {
   };
 
   return (
-    <textarea className="dragin-textarea" onInput={onInput}>
+    <textarea className="dragin-textarea" onInput={onInput} value={description}>
       {description}
     </textarea>
   );

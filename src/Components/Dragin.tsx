@@ -1,8 +1,10 @@
 import Draggable from 'react-draggable';
 import '../renderer/App.css';
-import DCTextArea from './DCTextArea';
+import { useState } from 'react';
+import AddDCTextArea from './AddDCTextArea';
 
 export default function Dragin() {
+  const [dcElements, setDcElements] = useState([]);
   let draginName = 'Dragin Title';
 
   // 1 character = 8px. draginName.length * 8 + "px"
@@ -16,9 +18,9 @@ export default function Dragin() {
         <textarea className="dragin-title" maxLength={24} onInput={onInput}>
           {draginName}
         </textarea>
+        <a><AddDCTextArea dcElements={dcElements} setDcElements={setDcElements}/></a>
         <div className="card-body">
-          <DCTextArea />
-          <p className="card-text">We can put text in here.</p>
+        {dcElements}
         </div>
       </div>
     </Draggable>
