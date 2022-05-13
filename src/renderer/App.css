@@ -82,7 +82,7 @@ border-radius: 1rem;
   width: 80%;
   transition: width 0.4s ease-in-out;
   border-radius: 1rem;
-  /* border: none; */
+  border: none;
 }
 
 .dragin-title:focus {
