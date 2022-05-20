@@ -1,4 +1,6 @@
 import DCTextArea from './DCTextArea';
+import ArticleIcon from '@mui/icons-material/Article';
+import IconButton from '@mui/material/IconButton';
 
 export default function AddDCTextArea(props) {
   const createDCTextArea = () => {
@@ -6,10 +8,8 @@ export default function AddDCTextArea(props) {
   };
 
   return (
-    <div className="buttonMenu">
-      <button type="button" className="btn btn-info" onClick={createDCTextArea}>
-        txt
-      </button>
-    </div>
+    <IconButton aria-label="add text area">
+      <ArticleIcon onClick={createDCTextArea} />
+    </IconButton>
   );
 }

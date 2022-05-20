@@ -1,15 +1,15 @@
-import AddDragin from 'Components/AddDragin';
 import Whiteboard from 'Components/Whiteboard';
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
+import WhiteboardControls from 'Components/WhiteboardControls';
 
 const Hello = () => {
   const [draginList, setDraginList] = useState([]);
 
   return (
     <div>
-      <AddDragin draginList={draginList} setDraginList={setDraginList} />
+      <WhiteboardControls draginList={draginList} setDraginList={setDraginList} />
       <Whiteboard draginList={draginList} />
     </div>
   );
