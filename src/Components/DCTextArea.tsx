@@ -2,6 +2,7 @@ import * as React from 'react';
 import InputUnstyled, { InputUnstyledProps } from '@mui/base/InputUnstyled';
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { styled } from '@mui/system';
+import Draggable from 'react-draggable';
 
 const blue = {
   100: '#DAECFF',
@@ -75,14 +76,16 @@ const CustomInput = React.forwardRef(function CustomInput(
   ref: React.ForwardedRef<HTMLDivElement>
 ) {
   return (
-    <InputUnstyled
-      components={{
-        Input: StyledInputElement,
-        Textarea: StyledTextareaElement,
-      }}
-      {...props}
-      ref={ref}
-    />
+    <Draggable bounds="parent">
+      <InputUnstyled
+        components={{
+          Input: StyledInputElement,
+          Textarea: StyledTextareaElement,
+        }}
+        {...props}
+        ref={ref}
+      />
+    </Draggable>
   );
 });
 
