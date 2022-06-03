@@ -2,7 +2,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Draggable from 'react-draggable';
 
 
-export default function DCImageArea() {
+export default function DCImageArea(props: any) {
   return (
     <Draggable bounds="parent">
       <CardMedia

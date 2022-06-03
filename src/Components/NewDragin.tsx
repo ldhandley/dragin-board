@@ -30,12 +30,15 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function NewDragin() {
+export default function NewDragin(props: any) {
   const [expanded, setExpanded] = useState(false);
   const [dcElements, setDcElements] = useState([]);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
+  };
+  const deleteDragin = () => {
+    props.setDraginList(props.draginList.filter((e: any)=> e.props.id != props.id));
   };
 
   return (
@@ -49,7 +52,7 @@ export default function NewDragin() {
               </Avatar>
             }
             action={
-              <IconButton aria-label="settings">
+              <IconButton aria-label="settings" onClick={deleteDragin}>
                 <DeleteOutlineIcon />
               </IconButton>
             }

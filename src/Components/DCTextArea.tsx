@@ -4,6 +4,19 @@ import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { styled } from '@mui/system';
 import Draggable from 'react-draggable';
 
+
+export default function DCTextArea(props: any) {
+  return (
+    <Draggable bounds="parent">
+      <CustomInput
+        aria-label="Dragin Text Area"
+        multiline
+        placeholder="Type something..."
+        />
+    </Draggable>
+  );
+}
+
 const blue = {
   100: '#DAECFF',
   200: '#80BFFF',
@@ -76,25 +89,13 @@ const CustomInput = React.forwardRef(function CustomInput(
   ref: React.ForwardedRef<HTMLDivElement>
 ) {
   return (
-    <Draggable bounds="parent">
-      <InputUnstyled
-        components={{
-          Input: StyledInputElement,
-          Textarea: StyledTextareaElement,
-        }}
-        {...props}
-        ref={ref}
-      />
-    </Draggable>
-  );
-});
-
-export default function DCTextArea() {
-  return (
-    <CustomInput
-      aria-label="Dragin Text Area"
-      multiline
-      placeholder="Type something..."
+    <InputUnstyled
+      components={{
+        Input: StyledInputElement,
+        Textarea: StyledTextareaElement,
+      }}
+      {...props}
+      ref={ref}
     />
   );
-}
+});

@@ -1,10 +1,13 @@
-import { useState } from "react";
 import { ChromePicker } from "react-color";
+import { useState } from "react";
 
-function Color(props) {
+
+function Color(props: any) {
+  // const [displayed, setDisplayed] = useState(false);
+
   const popover = {
     position: "absolute",
-    zIndex: "2",
+    // zIndex: "2",
   };
   const cover = {
     position: "fixed",
@@ -13,25 +16,20 @@ function Color(props) {
     bottom: "0px",
     left: "0px",
   };
-  const [displayed, setDisplayed] = useState(false);
-
-  function handleClick() {
-    setDisplayed(true);
-  }
 
   function handleClose() {
-    setDisplayed(false);
+    props.setDisplayed(false);
   }
 
   return (
     <div className="color">
-      <FontAwesomeIcon
+      {/* <FontAwesomeIcon
         onClick={handleClick}
         title="choose color"
         className="fa-icon"
         icon={faPalette}
-      />
-      {displayed ? (
+      /> */}
+      {props.displayed ? (
         <div style={popover}>
           <div style={cover} onClick={handleClose} />
           <ChromePicker />
