@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import '../renderer/App.css';
+import Tree from './DraginTree';
 
 export default function Whiteboard(props: any) {
   const canvasRef = useRef();
@@ -45,6 +46,7 @@ export default function Whiteboard(props: any) {
   return (
     <div className="Body">
       {props.draginList}
+      <Tree/>
       <canvas
         onMouseDown={onMouseDown}
         onMouseUp={onMouseUp}
