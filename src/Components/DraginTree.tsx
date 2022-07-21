@@ -7,6 +7,7 @@ export default function DraginTree() {
   const [treeData, setTreeData] = useState([
     {
       name: 'Making this a sentence for fun!!!',
+      expanded: false,
       children: [
         { name: 'This is a smaller sentence.' },
         { name: 'Smaller still!' },
@@ -19,6 +20,9 @@ export default function DraginTree() {
     },
   ]);
 
+  function changeNodeAtPath2(x: any): any {
+    return changeNodeAtPath(x);
+  }
   const externalNodeType = 'draginTodragin';
   const getNodeKey = ({ treeIndex }) => treeIndex;
   return (
@@ -36,14 +40,14 @@ export default function DraginTree() {
               onChange={(event) => {
                 const name = event.target.value;
 
-                setTreeData((treeData) => {
-                  changeNodeAtPath({
+                setTreeData(
+                  changeNodeAtPath2({
                     treeData,
                     path,
                     getNodeKey,
-                    newNode: { ...node, name }
+                    newNode: { ...node, name },
                   })
-                });
+                );
               }}
             />
           ),
