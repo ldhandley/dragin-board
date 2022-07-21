@@ -14,6 +14,7 @@ import Draggable from 'react-draggable';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import AddDCTextArea from './AddDCTextArea';
 import AddDCImageArea from './AddDCImageArea';
+import Tree from './DraginTree';
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -38,7 +39,7 @@ export default function NewDragin(props: any) {
     setExpanded(!expanded);
   };
   const deleteDragin = () => {
-    props.setDraginList(props.draginList.filter((e: any)=> e.props.id != props.id));
+    props.setDraginList(prevState => prevState.filter((e: any)=> e.props.id != props.id));
   };
 
   return (
@@ -94,7 +95,8 @@ export default function NewDragin(props: any) {
               dcElements={dcElements}
               setDcElements={setDcElements}
             />
-            {dcElements}
+            {/* {dcElements} */}
+            <Tree />
           </CardContent>
         </Collapse>
       </Card>
